@@ -1,0 +1,242 @@
+.toolBar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px 20px;
+  border-radius: 40px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  user-select: none;
+  transition: height 0.3s ease-out;
+}
+
+.toolBar button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolBar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pen-settings-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.colour-options-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.colour-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease;
+}
+
+.colour-swatch.selected {
+  transform: scale(1.2);
+  border: 2px solid #ffffff;
+}
+
+.colour-picker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.colour-picker.open {
+  border: none;
+}
+
+.colour-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.eraser-settings-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.select-settings-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 10px; 
+}
+
+.select-settings-container .colour-picker {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.select-settings-container .colour-picker.open {
+  border: none;
+  box-shadow: none;
+}
+
+.select-settings-container .colour-picker:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+.select-settings-container .colour-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.select-settings-container button.action-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-settings-container button.action-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.upload-button {
+  background: rgba(255, 255, 255, 0.1); 
+  border: 2px solid rgba(255, 255, 255, 0.2); 
+  color: white;
+  font-size: 1.5rem; 
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  position: relative;
+}
+.image-settings-container {
+  padding: 7px; 
+  min-width: 190px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.upload-button input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+ 
+
+.image-settings-container .close-button {
+  position: relative;
+  right: 10px;
+  z-index: 10;
+
+}
+.text-settings-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 10px; 
+}
+
+.add-text-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2) !important; 
+  color: white;
+  font-size: 1.5rem; 
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 40px !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* more button-like shadow */
+  position: relative;
+}
+
+.add-text-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
